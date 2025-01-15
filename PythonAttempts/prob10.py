@@ -5,7 +5,8 @@ def sum_of_primes(limit):
 
     for i in range(2, int(limit**0.5) + 1):
         if sieve[i]:
-            # Mark multiples of i as non-prime
+            # Mark multiples of i as non-prime. If sieve[i] == True => sieve[i] is prime
+            # Therefore multiples of sieve[i] i.e i*i must be composite
             for j in range(i * i, limit, i):
                 sieve[j] = False
 

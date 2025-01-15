@@ -15,4 +15,5 @@ def findNthPrime(n):
 
     return primes[-1]
 
+print(findNthPrime(500))
 
